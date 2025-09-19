@@ -13,7 +13,7 @@ export const PayloadUploads: CollectionConfig = {
     read: () => true,
   },
   admin: {
-    group: 'Acme',
+    group: 'Otiumtek',
     description: 'All media uploaded from Payload Admin',
   },
   fields: [

@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(getServerSideURL()),
   openGraph: mergeOpenGraph(),
   title: {
-    template: '%s | Acme Dashboard',
+    template: '%s | Otiumtek Dashboard',
     default: 'Dashboard',
   },
-  description: 'Acme Dashboard',
+  description: 'Otiumtek Dashboard',
   robots: {
     index: true,
     follow: true,

@@ -86,7 +86,7 @@ export const link: LinkType = ({ appearances, disableLabel = false, overrides = 
       },
       label: 'Custom URL',
       required: true,
-      defaultValue: 'https://acme.com',
+      defaultValue: 'https://Otiumtek.com',
     },
   ]
 

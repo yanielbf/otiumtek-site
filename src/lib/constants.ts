@@ -37,4 +37,4 @@ export const IMAGE_SIZES = {
     "(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 25vw",
 } as const;
 
-export const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? "admin@acme.com";
+export const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? "admin@Otiumtek.com";

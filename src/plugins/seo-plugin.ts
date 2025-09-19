@@ -6,7 +6,7 @@ import type { Plugin } from 'payload'
 import type { Blog } from '@/payload-types'
 
 const generateTitle: GenerateTitle<Blog> = ({ doc }) => {
-  return doc?.title ? `${doc.title} | Acme` : 'Acme'
+  return doc?.title ? `${doc.title} | Otiumtek` : 'Otiumtek'
 }
 
 const generateURL: GenerateURL<Blog> = ({ doc }) => {

@@ -1266,7 +1266,7 @@ export interface CopyRightInlineBlock {
   toYearType?: ('current' | 'fixed') | null;
   toYearFixed?: number | null;
   /**
-   * Text to display after the years. e.g. 'Acme. All rights reserved.'
+   * Text to display after the years. e.g. 'Otiumtek. All rights reserved.'
    */
   text?: string | null;
   id?: string | null;

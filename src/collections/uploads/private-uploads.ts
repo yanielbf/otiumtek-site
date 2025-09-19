@@ -9,7 +9,7 @@ export const PrivateUploads: CollectionConfig = {
     plural: 'Private Uploads',
   },
   admin: {
-    group: 'Acme',
+    group: 'Otiumtek',
     description: 'Private uploads that require authentication to access',
   },
   fields: [

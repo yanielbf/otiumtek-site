@@ -17,7 +17,7 @@ export default function FeaturesPage() {
     <Main>
       <LayoutHeader
         title="Features"
-        badge="Acme"
+        badge="Otiumtek"
         description="Vix cu falli fabulas feugait, mel ea aliquip mentitum elaboraret, ius id audire salutatus. Cum dicat praesent dignissim ne. Novum labitur blandit no mea. Quas omittantur te sit, ei his praesent electram eloquentiam."
       />
       <SectionSpacing>

@@ -2,7 +2,7 @@ import { Container, Section, Text } from '@react-email/components'
 import { render } from '@react-email/render'
 import { getPayload } from 'payload'
 import payloadConfig from '@/payload.config'
-import AcmeTemplate from '../email/email-template'
+import OtiumtekTemplate from '../email/email-template'
 
 type User = {
   id: string
@@ -59,7 +59,7 @@ export async function sendVerificationEmail({
     to: user.email,
     subject: 'Verify your email address',
     html: await render(
-      <AcmeTemplate
+      <OtiumtekTemplate
         heading="Verify your email address"
         subtitle="Account verification"
         content={
@@ -93,7 +93,7 @@ export async function sendChangeEmailVerification({
     to: newEmail,
     subject: 'Account Email Change',
     html: await render(
-      <AcmeTemplate
+      <OtiumtekTemplate
         heading="Account Email Change"
         action="Verify Email"
         url={url}
@@ -154,7 +154,7 @@ export async function sendResetPasswordEmail({
     to: user.email,
     subject: 'Reset your password',
     html: await render(
-      <AcmeTemplate
+      <OtiumtekTemplate
         action="Reset Password"
         content={
           <>
@@ -191,7 +191,7 @@ export async function sendDeleteAccountVerification({
     to: user.email,
     subject: 'Delete your account',
     html: await render(
-      <AcmeTemplate
+      <OtiumtekTemplate
         action="Delete Account"
         content={
           <>
@@ -223,7 +223,7 @@ export async function sendVerificationOTP({
     to: email,
     subject: `Verify your ${type}`,
     html: await render(
-      <AcmeTemplate
+      <OtiumtekTemplate
         heading={`Verify ${type}`}
         action={`OTP Verification`}
         content={

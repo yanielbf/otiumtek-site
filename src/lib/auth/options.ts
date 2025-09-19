@@ -33,8 +33,8 @@ export const betterAuthPlugins = [
     },
   }),
   passkey({
-    rpID: isDev ? 'localhost' : 'acme.com',
-    rpName: isDev ? 'Acme Local' : 'Acme',
+    rpID: isDev ? 'localhost' : 'Otiumtek.com',
+    rpName: isDev ? 'Otiumtek Local' : 'Otiumtek',
     origin: process.env.NEXT_PUBLIC_SERVER_URL,
   }),
   admin(),
@@ -45,7 +45,7 @@ export const betterAuthPlugins = [
 export type BetterAuthPlugins = typeof betterAuthPlugins
 
 export const betterAuthOptions: BetterAuthOptions = {
-  appName: 'Acme',
+  appName: 'Otiumtek',
   baseURL: process.env.NEXT_PUBLIC_BETTER_AUTH_URL,
   trustedOrigins: [process.env.NEXT_PUBLIC_BETTER_AUTH_URL],
   emailAndPassword: {

@@ -6,8 +6,8 @@ export function getEmailAdapter() {
 
   if (isLocal) {
     return nodemailerAdapter({
-      defaultFromAddress: 'contact@acme.com',
-      defaultFromName: 'Acme',
+      defaultFromAddress: 'contact@Otiumtek.com',
+      defaultFromName: 'Otiumtek',
       transportOptions: {
         host: 'localhost',
         port: 2500,
@@ -26,8 +26,8 @@ export function getEmailAdapter() {
 
   // Use Resend for production
   return resendAdapter({
-    defaultFromAddress: 'contact@acme.com',
-    defaultFromName: 'Acme',
+    defaultFromAddress: 'contact@Otiumtek.com',
+    defaultFromName: 'Otiumtek',
     apiKey: process.env.RESEND_API_KEY,
   })
 }

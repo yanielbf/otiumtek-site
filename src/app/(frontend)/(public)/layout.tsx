@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(getServerSideURL()),
   openGraph: mergeOpenGraph(),
   title: {
-    template: "%s | Acme",
-    default: "Acme",
+    template: "%s | Otiumtek",
+    default: "Otiumtek",
   },
-  description: "Acme",
+  description: "OtiumtekSomos una empresa de desarrollo de software fundada hace 5 años, con base en Uruguay y proyección internacional. Nuestro equipo está conformado por profesionales con más de 14 años de experiencia en la creación de soluciones tecnológicas robustas, eficientes y adaptadas a las necesidades reales de las empresas.",
   robots: {
     index: true,
     follow: true,

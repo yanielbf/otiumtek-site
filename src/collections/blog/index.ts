@@ -55,7 +55,7 @@ export const Blog: CollectionConfig<'blog'> = {
     },
   },
   admin: {
-    group: 'Acme',
+    group: 'Otiumtek',
     defaultColumns: ['title', 'slug', 'updatedAt'],
     livePreview: {
       url: ({ data }) => {

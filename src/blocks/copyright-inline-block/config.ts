@@ -55,9 +55,9 @@ export const CopyRightInlineBlock: Block = {
       name: 'text',
       type: 'text',
       label: 'Text',
-      defaultValue: 'Acme. All rights reserved.',
+      defaultValue: 'Otiumtek. All rights reserved.',
       admin: {
-        description: "Text to display after the years. e.g. 'Acme. All rights reserved.'",
+        description: "Text to display after the years. e.g. 'Otiumtek. All rights reserved.'",
       },
     },
   ],

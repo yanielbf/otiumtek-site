@@ -120,7 +120,7 @@ function Layout({
                 src={LOGO_URL}
                 width={36}
                 height={36}
-                alt="Acme Logo"
+                alt="Otiumtek Logo"
                 className={cn('mx-auto my-0', classNames?.image)}
               />
             </Section>
@@ -176,7 +176,7 @@ function Layout({
             />
 
             <Text className={cn('text-[#666666] text-[12px] leading-[24px]', classNames?.footer)}>
-              Acme, Inc.
+              Otiumtek, Inc.
               <br />
               100 Main St, Anytown, USA
               {baseUrl && (

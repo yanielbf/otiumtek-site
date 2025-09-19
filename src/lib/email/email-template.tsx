@@ -5,7 +5,7 @@ import type { ReactNode } from 'react'
 import type { LayoutClassNames } from './components/layout'
 import Layout from './components/layout'
 
-export interface AcmeTemplateProps {
+export interface OtiumtekTemplateProps {
   heading: string
   subtitle?: string
   content: ReactNode
@@ -16,7 +16,7 @@ export interface AcmeTemplateProps {
   preview?: string
 }
 
-export const AcmeTemplate = ({
+export const OtiumtekTemplate = ({
   heading,
   subtitle = undefined,
   content = '',
@@ -25,7 +25,7 @@ export const AcmeTemplate = ({
   url,
   baseUrl,
   preview,
-}: AcmeTemplateProps) => {
+}: OtiumtekTemplateProps) => {
   return (
     <Layout
       heading={heading}
@@ -41,4 +41,4 @@ export const AcmeTemplate = ({
   )
 }
 
-export default AcmeTemplate
+export default OtiumtekTemplate
