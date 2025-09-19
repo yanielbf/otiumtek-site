@@ -298,3 +298,16 @@ MIT License - see [LICENSE.md](LICENSE.md) for details.
 ---
 
 **Need help?** Check out the [PayloadCMS docs](https://payloadcms.com/docs) or [Better Auth docs](https://better-auth.com/docs).
+
+
+1. Clonar el repositorio
+2. Borrar yarn.lock
+3. Instalar los node_modules npm i 
+4. Ejecutar npm run 
+5. Ejecutar npm run dev:next
+6. Ejecutar npm run build
+7. Ejecutar estos commandos
+cp -r public .next/standalone/public
+cp -r .next/static .next/standalone/.next/static
+8. Desplegar aplicacion de node apuntando a .next/standalone/server.js
+
