@@ -171,7 +171,7 @@ export const Contactus = () => {
                   <FormLabel>Mensaje</FormLabel>
                   <FormControl>
                     <Textarea
-                      rows={30}
+                      rows={8}
                       placeholder="Contanos tu idea..."
                       {...field}
                     />
