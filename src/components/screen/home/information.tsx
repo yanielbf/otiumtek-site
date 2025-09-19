@@ -26,7 +26,7 @@ export const Information = () => {
         <div>
           <p>Dirección: Av. 18 de Julio 1240, Montevideo, Uruguay</p>
           <p>Tel: (+598) 95159228 </p>
-          <p>Email: info@otiumteksrl.com</p>
+          <p>Email: negocios@otiumteksrl.com</p>
         </div>
         <div className="mt-5">Partners</div>
         <div className="grid grid-cols-5">

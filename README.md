@@ -304,11 +304,12 @@ MIT License - see [LICENSE.md](LICENSE.md) for details.
 2. Borrar yarn.lock
 3. Instalar los node_modules npm i 
 5. Ejecutar npm run dev:next
-6. Copiar .env
+6. Ejecutar rm -r .next/*
 6. Ejecutar npm run build
 7. Ejecutar estos commandos
 cp -r public .next/standalone/public
 cp -r .next/static .next/standalone/.next/static
 8. editar el .next/standalone/server.js y ponerle el puerto 0
 9. Desplegar aplicacion de node apuntando a .next/standalone/server.js
+10. Reinciar https://panel.dinahosting.com/otras-aplicaciones/otras-aplicaciones/_producto/otiumteksrl.com app node
 
