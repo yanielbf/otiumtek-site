@@ -303,7 +303,6 @@ MIT License - see [LICENSE.md](LICENSE.md) for details.
 1. Clonar el repositorio
 2. Borrar yarn.lock
 3. Instalar los node_modules npm i 
-4. Ejecutar npm run 
 5. Ejecutar npm run dev:next
 6. Ejecutar npm run build
 7. Ejecutar estos commandos

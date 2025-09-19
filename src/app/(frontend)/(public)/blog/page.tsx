@@ -74,5 +74,5 @@ export default async function Page() {
 }
 
 export const metadata: Metadata = {
-  title: `Acme Blog`,
+  title: `Otiumtek Blog`,
 }
