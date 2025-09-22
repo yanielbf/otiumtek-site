@@ -10,9 +10,10 @@ import {
 } from "@/components/layout/elements";
 import { Main } from "@/components/layout/main";
 
+import dssConnectoBanner from "public/images/solutions/dss_connector/banner.png";
 import dssConnectoLogo from "public/images/solutions/dss_connector/logo.svg";
+import dssConnectoLogin from "public/images/solutions/dss_connector/login.png";
 import dssConnectorMain from "public/images/solutions/dss_connector/main.png";
-import dssConnectoFlow from "public/images/solutions/dss_connector/flow.png";
 import video from "public/images/solutions/dss_connector/video.gif";
 
 export default function DssConnectorPage() {
@@ -23,11 +24,18 @@ export default function DssConnectorPage() {
         description={
           <div className="mt-5 flex justify-center flex-col items-center">
             <Image
+              src={dssConnectoBanner}
+              width={0}
+              height={0}
+              alt="DSS Connector Logo"
+              className="hidden md:block"
+            />
+            <Image
               src={dssConnectoLogo}
               width={0}
               height={0}
               alt="DSS Connector Logo"
-              className="w-1/2 md:w-1/8"
+              className="w-1/2 md:w-1/8 block md:hidden"
             />
             <p className="mt-5 text-xl font-bold">
               Integra Dahua DSS con tus sistemas de negocio en minutos
@@ -38,7 +46,7 @@ export default function DssConnectorPage() {
       />
       <SectionSpacing className="mt-10 mb-20">
         <SectionHeader
-          title="Tienes este problema:"
+          title="Tienes este problema"
           description={
             <div className="text-muted-foreground text-base/7 sm:text-base/7 text-justify mt-5">
               ¿Tu plataforma DSS Dahua funciona aislada de tu nómina, control de
@@ -79,7 +87,7 @@ export default function DssConnectorPage() {
               </ul>
             </div>
           }
-          media={<ImageMedia src={dssConnectorMain} alt="DSS Main" zoom />}
+          media={<ImageMedia src={dssConnectoLogin} alt="DSS Main" zoom />}
         />
         <SectionHorizontal
           variant="right"
@@ -96,7 +104,7 @@ export default function DssConnectorPage() {
           }
           media={
             <ImageMedia
-              src={dssConnectoFlow}
+              src={dssConnectorMain}
               alt="Flujo del DSS Connector"
               imgClassName="rounded-2xl"
               zoom
