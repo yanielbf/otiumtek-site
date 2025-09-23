@@ -3,6 +3,7 @@ import Link from "next/link";
 import { OtiumtekLogoIcon } from "../icons";
 import { Container } from "./elements";
 import { ThemeSelector } from "./theme-switch";
+import { LangSelector } from "./lang-switch";
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
@@ -100,7 +101,8 @@ export default function Header() {
           </div>
         </div>
         {/* Right side */}
-        <ThemeSelector />
+        <LangSelector />
+        {/* <ThemeSelector /> */}
         {/* <UserButton
           size="icon"
           additionalLinks={[

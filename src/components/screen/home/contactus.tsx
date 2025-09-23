@@ -29,6 +29,8 @@ import {
 
 import { sendTelegramContact } from "@/lib/api";
 
+import { useT } from "@/components/layout/i18n-provider";
+
 const schema = z.object({
   name: z.string().min(2, "Ingresá tu nombre completo"),
   email: z.string().email("Email inválido"),
@@ -47,6 +49,7 @@ const schema = z.object({
 type FormValues = z.infer<typeof schema>;
 
 export const Contactus = () => {
+  const t = useT();
   const [serverMsg, setServerMsg] = useState<string | null>(null);
 
   const form = useForm<FormValues>({
@@ -77,11 +80,10 @@ export const Contactus = () => {
   return (
     <Card variant="mixed" className="md:w-xl backdrop-blur">
       <CardHeader>
-        <CardTitle className="text-2xl">Hablemos de tu proyecto</CardTitle>
-        <CardDescription>
-          Completá el formulario y nuestro equipo se pondrá en contacto contigo
-          a la brevedad.
-        </CardDescription>
+        <CardTitle className="text-2xl">
+          {t("main.footer.contact.title")}
+        </CardTitle>
+        <CardDescription>{t("main.footer.contact.content")}</CardDescription>
       </CardHeader>
 
       <CardContent>
@@ -114,9 +116,12 @@ export const Contactus = () => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Nombre</FormLabel>
+                  <FormLabel>{t("main.footer.contact.input.name")}</FormLabel>
                   <FormControl>
-                    <Input placeholder="Tu nombre y apellido" {...field} />
+                    <Input
+                      placeholder={t("main.footer.contact.placeholder.name")}
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -129,11 +134,11 @@ export const Contactus = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Correo electrónico</FormLabel>
+                  <FormLabel>{t("main.footer.contact.input.email")}</FormLabel>
                   <FormControl>
                     <Input
                       type="email"
-                      placeholder="tu@correo.com"
+                      placeholder={t("main.footer.contact.placeholder.email")}
                       autoComplete="email"
                       {...field}
                     />
@@ -149,13 +154,12 @@ export const Contactus = () => {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Teléfono (opcional)</FormLabel>
+                  <FormLabel>{t("main.footer.contact.input.phone")}</FormLabel>
                   <FormControl>
                     <Input type="tel" placeholder="+598 ..." {...field} />
                   </FormControl>
                   <FormDescription>
-                    Podés dejarlo vacío si preferís que te contactemos por
-                    email.
+                    {t("main.footer.contact.placeholder.phone")}
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -168,11 +172,13 @@ export const Contactus = () => {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Mensaje</FormLabel>
+                  <FormLabel>
+                    {t("main.footer.contact.input.message")}
+                  </FormLabel>
                   <FormControl>
                     <Textarea
                       rows={8}
-                      placeholder="Contanos tu idea..."
+                      placeholder={t("main.footer.contact.placeholder.message")}
                       {...field}
                     />
                   </FormControl>
@@ -186,7 +192,9 @@ export const Contactus = () => {
               disabled={form.formState.isSubmitting}
               className="flex items-center justify-center"
             >
-              {form.formState.isSubmitting ? "Enviando…" : "Enviar"}
+              {form.formState.isSubmitting
+                ? t("main.footer.contact.sending")
+                : t("main.footer.contact.button.send")}
             </Button>
 
             {serverMsg && (

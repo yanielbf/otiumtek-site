@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import {
   VideoMedia,
@@ -15,8 +16,10 @@ import dssConnectoLogo from "public/images/solutions/dss_connector/logo.svg";
 import dssConnectoLogin from "public/images/solutions/dss_connector/login.png";
 import dssConnectorMain from "public/images/solutions/dss_connector/main.png";
 import video from "public/images/solutions/dss_connector/video.gif";
+import { useT } from "@/components/layout/i18n-provider";
 
 export default function DssConnectorPage() {
+  const t = useT();
   return (
     <Main>
       <LayoutHeader
@@ -38,7 +41,7 @@ export default function DssConnectorPage() {
               className="w-1/2 md:w-1/8 block md:hidden"
             />
             <p className="mt-5 text-xl font-bold">
-              Integra Dahua DSS con tus sistemas de negocio en minutos
+              {t("solution.dss_connector.title")}
             </p>
           </div>
         }
@@ -46,43 +49,38 @@ export default function DssConnectorPage() {
       />
       <SectionSpacing className="mt-10 mb-20">
         <SectionHeader
-          title="Tienes este problema"
+          title={t("solution.dss_connector.issue.title")}
           description={
             <div className="text-muted-foreground text-base/7 sm:text-base/7 text-justify mt-5">
-              ¿Tu plataforma DSS Dahua funciona aislada de tu nómina, control de
-              accesos o ERP? La integración manual es costosa, lenta y poco
-              confiable.
+              {t("solution.dss_connector.issue.content")}
             </div>
           }
         />
         <SectionHeader
-          title="DSS Connector es la solución"
+          title={t("solution.dss_connector.solution.title")}
           description={
             <div className="text-muted-foreground text-base/7 sm:text-base/7 text-justify mt-5">
-              DSS Connector actúa como capa intermedia entre Dahua DSS y tus
-              aplicaciones críticas. Con arquitectura modular y plugins
-              dinámicos, transforma notificaciones de DSS en acciones concretas
-              para tu negocio.
+              {t("solution.dss_connector.solution.content")}
             </div>
           }
         />
         <SectionHorizontal
           variant="right"
-          title="¿Qué ofrece?"
+          title={t("solution.dss_connector.offer.title")}
           description={
             <div className="mt-6">
               <ul>
                 <li className="text-muted-foreground text-base/7 sm:text-base/7">
-                  01. Integración rápida y segura
+                  {t("solution.dss_connector.offer.one.content")}
                 </li>
                 <li className="text-muted-foreground text-base/7 sm:text-base/7">
-                  02. Procesamiento en tiempo real de eventos
+                  {t("solution.dss_connector.offer.two.content")}
                 </li>
                 <li className="text-muted-foreground text-base/7 sm:text-base/7">
-                  03. Arquitectura confiable y escalable
+                  {t("solution.dss_connector.offer.three.content")}
                 </li>
                 <li className="text-muted-foreground text-base/7 sm:text-base/7">
-                  04. Plugins adaptables a cada necesidad
+                  {t("solution.dss_connector.offer.four.content")}
                 </li>
               </ul>
             </div>
@@ -91,15 +89,14 @@ export default function DssConnectorPage() {
         />
         <SectionHorizontal
           variant="right"
-          title="¿Cómo funciona?"
+          title={t("solution.dss_connector.howwork.title")}
           description={
             <div className="text-muted-foreground text-base/7 sm:text-base/7 mt-5">
-              <b>DSS Connector</b> es un único producto con dos módulos embebidos: el <b>Gateway y el Core de Integraciones</b> (gestor de plugins). 
-              El Gateway abre la comunicación con Dahua DSS para inyectar datos 
-              (personas, vehículos, credenciales, permisos y acciones sobre dispositivos, etc). Luego, el 
-              Core de Integraciones normaliza y enruta esos eventos mediante plugins hacia sistemas externos; todo en un solo paquete, bidireccional, extensible y fácil de desplegar
-              (nómina, seguridad, BI) sin tocar el núcleo. <p>En simple: <b>Sistemas externos → Gateway (DSS Connector) → DSS y 
-              de regreso DSS → Core/Plugins → Sistemas externos</b></p>.
+              {t("solution.dss_connector.howwork.content")}
+              <p>
+                {t("solution.dss_connector.howwork.content2")} {" "}
+                <b>{t("solution.dss_connector.howwork.content3")}</b>
+              </p>
             </div>
           }
           media={

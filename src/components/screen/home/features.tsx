@@ -1,3 +1,4 @@
+"use client";
 import { Container, ImageMedia } from "@/components/layout/elements";
 import { AnimatedGroup } from "@/components/motion-primitives/animated-group";
 import { Card } from "@/components/ui/card";
@@ -6,8 +7,11 @@ import softwareDevelopment from "public/images/services/software_development.png
 import updateOldSystems from "public/images/services/update_old_systems.png";
 import devops from "public/images/services/devops.png";
 import consulting from "public/images/services/consulting.png";
+import { useT } from "@/components/layout/i18n-provider";
 
 export const Features = () => {
+  const t = useT();
+
   return (
     <Container asChild>
       <AnimatedGroup className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
@@ -22,10 +26,10 @@ export const Features = () => {
           />
 
           <H2 className="scroll-m-20 font-extrabold tracking-tight">
-            Desarrollo de software a medida
+            {t('main.features.one.title')}
           </H2>
-          <Muted className="text-muted-foreground mb-6 text-base lg:mb-14 mx-auto">
-            Creamos soluciones tecnológicas personalizadas que se adaptan exactamente a las necesidades de tu negocio. Desde aplicaciones web hasta sistemas empresariales, desarrollamos software eficiente, escalable y fácil de usar.
+          <Muted className="text-muted-foreground mb-6 text-base lg:mb-14 mx-auto text-justify">
+            {t('main.features.one.content')}
           </Muted>
         </Card>
         <Card
@@ -38,10 +42,10 @@ export const Features = () => {
             imgClassName="rounded-2xl"
           />
           <H2 className="scroll-m-20 font-extrabold tracking-tight">
-            Modernización de sistemas
+            {t('main.features.two.title')}
           </H2>
-          <Muted className="text-muted-foreground mb-6 text-base lg:mb-14 mx-auto">
-            Actualizamos plataformas heredadas (legacy) migrándolas a tecnologías modernas y arquitecturas escalables. Mejoramos el rendimiento, la seguridad y la experiencia del usuario sin interrumpir tu operación.
+          <Muted className="text-muted-foreground mb-6 text-base lg:mb-14 mx-auto text-justify">
+            {t('main.features.two.content')}
           </Muted>
         </Card>
         <Card
@@ -54,10 +58,10 @@ export const Features = () => {
             imgClassName="rounded-2xl"
           />
           <H2 className="scroll-m-20 font-extrabold tracking-tight">
-            Servicios DevOps
+            {t('main.features.three.title')}
           </H2>
-          <Muted className="text-muted-foreground mb-6 text-base lg:mb-14 mx-auto">
-            Automatizamos procesos de desarrollo y despliegue para acelerar la entrega de software. Gestionamos infraestructura como código y garantizamos entornos estables, seguros y escalables.
+          <Muted className="text-muted-foreground mb-6 text-base lg:mb-14 mx-auto text-justify">
+            {t('main.features.three.content')}
           </Muted>
         </Card>
         <Card
@@ -70,10 +74,10 @@ export const Features = () => {
             imgClassName="rounded-2xl"
           />
           <H2 className="scroll-m-20 font-extrabold tracking-tight">
-            Consultoría técnica
+            {t('main.features.four.title')}
           </H2>
-          <Muted className="text-muted-foreground mb-6 text-base lg:mb-14 mx-auto">
-            Asesoramos a empresas en la toma de decisiones tecnológicas clave. Analizamos tus sistemas, proponemos soluciones escalables y diseñamos arquitecturas eficientes.
+          <Muted className="text-muted-foreground mb-6 text-base lg:mb-14 mx-auto text-justify">
+            {t('main.features.four.content')}
           </Muted>
         </Card>
       </AnimatedGroup>

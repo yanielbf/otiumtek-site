@@ -1,3 +1,4 @@
+"use client";
 import {
   Card,
   CardContent,
@@ -9,16 +10,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 import ho from "public/images/partners/ho_logo.jpg";
+import { useT } from "@/components/layout/i18n-provider";
 
 export const Information = () => {
+  const t = useT();
   return (
     <Card variant="mixed" className="border-0 bg-transparent">
       <CardHeader>
-        <CardTitle className="text-2xl">Sobre la empresa</CardTitle>
+        <CardTitle className="text-2xl">
+          {t("main.footer.about.title")}
+        </CardTitle>
         <CardDescription className="text-base/7 sm:text-base/7">
-          Otiumtek SRL es una empresa de desarrollo de software enfocada en
-          crear soluciones innovadoras, escalables y confiables para impulsar la
-          transformación digital de nuestros clientes.
+          {t("main.footer.about.content")}
         </CardDescription>
       </CardHeader>
 
